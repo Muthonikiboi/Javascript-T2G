@@ -1,19 +1,19 @@
 //1.check if a string is a palindrome
-console.log('1.******Check if a string is a palindrome******');
-function isPalidrome(str) {
-    let cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    let string=cleanedStr.split('').reverse().join('');
+console.log('1.******Check if a string is a palindrome******');// script.js
 
-    if (string === cleanedStr) {
-        return true;
-    }
-    else{
-        return false;
-    }
+function isPalindrome(str) {
+    // Remove non-alphanumeric characters and convert to lowercase
+    const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    // Reverse the cleaned string and compare
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    return cleanedStr === reversedStr;
 }
-console.log(isPalidrome('A man, a plan, a canal: Panama'));
-console.log(isPalidrome('Was it a car or a cat I saw?'));
-console.log(isPalidrome('Hello, world!'));
+
+console.log(isPalindrome('A man, a plan, a canal, Panama'));
+console.log(isPalindrome('Was it a car or a cat I saw?'));
+console.log(isPalindrome('Hello, world!'));
+
+
 
 //2.Reverse a string
 console.log('2.******reverse a string*******')
@@ -22,6 +22,9 @@ function reverseString(str) {
     return reversedStr;
 }
 console.log(reverseString('Hi my name is Joy'));
+
+
+
 
 // //3.Find the longest word in a string
 
@@ -33,6 +36,9 @@ console.log(reverseString('Hi my name is Joy'));
 // }
 
 // console.log(longestPandromicSubstring('babad'));
+
+
+
 
 //4.Check if a string is a Anagram
 console.log("4.******Anagram Check on string*******");
@@ -53,6 +59,9 @@ function areAnagrams(str1, str2) {
 console.log(areAnagrams('listen', 'silent'));
 console.log(areAnagrams('hello', 'world'));
 
+
+
+
 //5.Remove duplicate characters from a string
 console.log("5.******Remove duplicate characters from a string******");
 function removeDuplicates(str) {
@@ -67,6 +76,9 @@ console.log(removeDuplicates('abcd'));
 console.log(removeDuplicates('aabbcc'));
 
 
+
+
+
 //6.Count Palindromes in a string
 // console.log("6.******Count Palindromes in a string******");
 // function countPalidromesString(str){
@@ -78,13 +90,20 @@ console.log(removeDuplicates('aabbcc'));
 // console.log(countPalidromesString('a'))
 // console.log(countPalidromesString('abc'))
 
-//7.Longest common Prefix
-console.log('******Longest Common Prefix******');
-function longestCommonPrefix(str){
 
-}
-console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
-console.log(longestCommonPrefix([]))
+
+
+//7.Longest common Prefix
+// console.log('******Longest Common Prefix******');
+// function longestCommonPrefix(str){
+
+// }
+// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+// console.log(longestCommonPrefix(["apple", "banana", "cherry"]));
+
+
+
 
 //8.Case insensitive parindrome
 console.log("8.******Case Insensitive Parindrome******");
@@ -103,3 +122,6 @@ console.log(isCaseInsensitiveParindrome('Racecar'));
 console.log(isCaseInsensitiveParindrome('Palindrome'));
 console.log(isCaseInsensitiveParindrome('Madam'));
 console.log(isCaseInsensitiveParindrome('Hello'));
+
+
+module.exports = { reverseString, areAnagrams  ,isPalindrome ,isCaseInsensitiveParindrome , removeDuplicates};
