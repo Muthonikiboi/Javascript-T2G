@@ -1,0 +1,115 @@
+Data Types and Variables:
+1.What are the different data types used in JavaScript variables in the provided code?
+
+
+2.Explain the difference between var, let, and const in JavaScript.
+     Const is used to create a variable whos value cannot be changed,let is used for variables that can be redeclaired and var is an old way of declaring variables.
+
+
+3.Why does JavaScript allow assigning different data types to the same variable?
+     This is because a variable acts as a storage for a specified datatype either a string,number ,boolean ,bigInt where the help to manage and manipulate this data
+
+
+4.How does JavaScript handle variables declared but not initialized? Illustrate with an example from the code.
+     When a variable is declared in JavaScript but not initialized Javascript always outputs undefined.
+         let declared;
+         console.log(declared); 
+
+
+5.Discuss the significance of variable names in programming and how they are used in JavaScript.
+     Variable names are used to Identify and reference values ina a code.
+         const myName="Joy Elizabeth Muthoni Kiboi";
+         console.log(`My name is ${myName}`);
+
+
+
+Numeric Data Types:
+6.What are the various numeric data types used in JavaScript, as shown in the code?
+
+
+7.Explain the difference between integers, doubles, and Infinity in JavaScript with examples.
+     Infinity represents a number larger than any finite number eg 3/0 ,integers are numeric value without any decimal eg 2345 and double are numerical values that allow decimals 3.14 especially 64bit.
+         //infinite
+         let num1=3/0;
+         console.log(3/0)
+         //integer value
+         let num2=50
+         console.log(num2)
+         //double value
+         let num3=345.689
+         console.log(num3)
+
+8.How does JavaScript handle arithmetic operations involving different numeric data types?
+     Arithmetic operations include -,+,/,%,++.--
+     When handling arithmetic operations javascript output depends on input data types eg.
+         console.log(2+2) //Output is 4
+         console.log("2"+"2") //Output is 22
+         console.log("Joy"+34) //Output is Joy34
+
+
+String Data Type:
+9.How are strings represented in JavaScript?
+     They are represented using single or double quotes 
+         let str ="Hi my name is Joy"
+         console.log(str)
+
+
+10.Discuss the difference between declaring strings with single quotes ('') and double quotes ("") in JavaScript.
+
+
+11.Explain why characters are automatically treated as strings in JavaScript.
+
+
+Boolean and Undefined Data Types:
+12.Explain the purpose of boolean variables in JavaScript.
+Booloan has 2 possible values :True and False and it is useful for decision making and flow control in the program.
+
+
+13.Discuss the concept of undefined in JavaScript variables and provide examples from the code.
+undefined varianle indicates that the variable has beeen defined but not assigned a value.
+
+
+14.How are boolean variables useful in conditional statements and control flow in JavaScript?
+      Booleans control the program flow using consitionals
+           let isloggedIn = true;
+           if (isloggedIn){
+                console.log("Log In Successfully);
+           }else{
+                console.log("Please enter valid credentials");
+           }
+
+
+
+
+Null Data Type:
+15.Describe the significance of the null value in JavaScript.
+16.Differentiate between null and undefined in JavaScript.
+17.Provide an example from the code illustrating the use of null.
+
+
+
+Object Data Type:
+18.Explain how objects are represented in JavaScript.
+19.Discuss the structure and purpose of the countryInfo object in the provided code.
+20.How can objects be nested within other objects in JavaScript?
+
+
+
+Array Data Type:
+21.Describe the purpose and structure of arrays in JavaScript.
+22.Provide examples from the code demonstrating arrays containing different data types.
+23.Discuss the concept of "array of arrays" and its significance.
+
+
+
+Variable Naming Conventions:
+24.What are the conventions for naming variables in JavaScript?
+25.Discuss the importance of choosing meaningful and descriptive variable names.
+26.Identify any variable naming conventions followed or violated in the provided code.
+
+
+
+Constants in JavaScript:
+27.Explain the use of const keyword in JavaScript.
+28.Discuss why reassigning a value to a constant variable results in an error.
+29.Provide examples from the code demonstrating the declaration and use of constants.

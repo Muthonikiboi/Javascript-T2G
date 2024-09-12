@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 style="margin-left: 30%; font-size: 50px;">Products Page</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        const product = async function() {
+            const url = 'https://run.mocky.io/v3/aae3903b-64bf-4285-920d-0be7f5345e76';
+
+            try {
+                const result = await fetch(url);
+                const data = await result.json();
+                console.log(data);
+
+                populateData(data);
+            } catch (e) {
+                console.error('Error:', e);
+            }
+        };
+        product();
+
+        const populateData = function(data) {
+            const tableBody = document.querySelector('tbody');
+            data.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${product.id}</td>
+                    <td>${product.name}</td>
+                    <td>${product.description}</td>
+                    <td>${product.price}</td>
+                    <td>${product.category}</td>
+                    <td>${product.stock}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        };
+    </script>
+</body>
+</html>

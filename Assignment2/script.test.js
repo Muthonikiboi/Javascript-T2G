@@ -30,7 +30,7 @@ test('Remove Duplicate Characters', () =>{
 })
 
 //8.Case Insensitive Prindrome
-test(' Case Insensitive Parindrome Test', () =>{
+test('Case Insensitive Parindrome Test', () =>{
     expect(isCaseInsensitiveParindrome('Aba')).toBe(true);
     expect(isCaseInsensitiveParindrome('Racecar')).toBe(true);
     expect(isCaseInsensitiveParindrome('Palindrome')).toBe(false);
