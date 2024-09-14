@@ -83,33 +83,68 @@ undefined varianle indicates that the variable has beeen defined but not assigne
 
 Null Data Type:
 15.Describe the significance of the null value in JavaScript.
+   It is used to indicate that a variable is intentionally empty
+
 16.Differentiate between null and undefined in JavaScript.
+   null is assigned no value while undefined is declared but not initialized
+
 17.Provide an example from the code illustrating the use of null.
+   let user = null; 
 
 
 
 Object Data Type:
 18.Explain how objects are represented in JavaScript.
+   Objects are collections of key-value pairs
+
 19.Discuss the structure and purpose of the countryInfo object in the provided code.
+
+
 20.How can objects be nested within other objects in JavaScript?
+   const student={
+      id:123456;
+      name:{
+      firstname:"JoyElizabeth"
+      lastname:"Kiboi"
+      }}
 
 
 
 Array Data Type:
 21.Describe the purpose and structure of arrays in JavaScript.
+     They are used to hold different dataTypes
+     let me=["Joy",22,"Dkut"]
+
 22.Provide examples from the code demonstrating arrays containing different data types.
+     let me=["Joy",22,"Dkut"]
+
 23.Discuss the concept of "array of arrays" and its significance.
+     let matrix = [
+       [1, 2, 3],
+       [4, 5, 6]
+     ];
+
 
 
 
 Variable Naming Conventions:
 24.What are the conventions for naming variables in JavaScript?
+     Start with a letter, underscore, or dollar sign.
+
 25.Discuss the importance of choosing meaningful and descriptive variable names.
+     make code easier to understand and maintain.
+
 26.Identify any variable naming conventions followed or violated in the provided code.
 
 
 
 Constants in JavaScript:
 27.Explain the use of const keyword in JavaScript.
+     Declares variables whose values cannot be reassigned.
+
 28.Discuss why reassigning a value to a constant variable results in an error.
+     ensures the value remains constant(They are use dwhen a value cannot be changed
+
 29.Provide examples from the code demonstrating the declaration and use of constants.
+     const pi = 3.14; 
+     console.log(pi)
