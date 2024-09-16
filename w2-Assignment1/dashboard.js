@@ -53,39 +53,31 @@ const users = [
 ];
 
 const dataAnalysisDashboard = (users) => {
-  // Define the date one week ago
-  const weekAgo = new Date();
-  weekAgo.setDate(weekAgo.getDate() - 7);
-  console.log(`Week ago date: ${weekAgo.toString()}`);
+  // Count posts per user
+  users.forEach(user => {
+    console.log(`${user.name} has ${user.posts.length} posts`);
+  });
+
   
-  // Filter active users based on having more than 1 post and recent posts in the last week
-  const activeUsers = users
-    .filter((user) => user.posts.length > 1) 
-    .filter((user) => user.posts.some(post => new Date(post.timestamp) > weekAgo));
-  
-  // Log active users with their post counts
-  console.log("Active Users:");
-  activeUsers.forEach(user => console.log(`${user.name} has ${user.posts.length} posts`));
-  
-  // Extract popular posts (posts with likes >= 10) for active users
-  const popularPosts = activeUsers.map(user => {
+  // Filter posts with 10 or more likes
+  const usersWithFilteredPosts = users.map(user => {
     const filteredPosts = user.posts.filter(post => post.likes >= 10);
     return {
       ...user,
-      popularPosts: filteredPosts
+      filteredPosts: filteredPosts
     };
   });
-  
-  // Log popular posts details
-  popularPosts.forEach(user => console.log(`${user.name} has ${user.popularPosts.length} popular posts`));
 
-  // Calculate total likes from popular posts
-  const totalLikes = popularPosts.reduce((sum, user) => {
-    return sum + user.popularPosts.reduce((acc, post) => acc + post.likes, 0);
-  }, 0);
-  
-  const avLikesPerUser = popularPosts.length > 0 ? totalLikes / popularPosts.length : 0;
-  console.log(`Average likes per user: ${avLikesPerUser.toFixed(2)}`);
+  usersWithFilteredPosts.forEach(user => {
+    console.log(`${user.name} has ${user.filteredPosts.length} posts after filtering`);
+  });
+
+  // Calculate average likes per post
+  usersWithFilteredPosts.forEach(user => {
+    const totalLikes = user.filteredPosts.reduce((sum, post) => sum + post.likes, 0);
+    const averageLikes = user.filteredPosts.length > 0 ? totalLikes / user.filteredPosts.length : 0;
+    console.log(`${user.name} has an average of ${averageLikes.toFixed(2)} likes.`);
+  });
 };
 
 dataAnalysisDashboard(users);
