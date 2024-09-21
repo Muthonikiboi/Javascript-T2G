@@ -113,10 +113,37 @@ Explore various technical questions related to JavaScript objects and strings:
 11. **Invert Object Keys and Values**: Create a copy of an object where keys become values and vice versa.
 12. **Check Object Property**: Check whether an object contains a given property.
 
+
+
+### w2-Assignment1: Data Analysis Dashboard
+
+In this assignment, I created a data analysis dashboard to analyze users' posts, filter posts with 10 or more likes, and calculate average likes per post.
+
+### w2-Assignment2: Spread and Rest Operators
+
+Assignment showcasing my understanding of spread and rest operators in JavaScript.
+
+---
+
+### w2-Assignment3-4: Cart Project
+
+This assignment involves implementing a shopping cart with several key features:
+
+- **Adding Items to Cart**: Dynamically add items to the cart, display the total, and update the quantity for each item (incrementing or reducing).
+  ![Screenshot from 2024-09-21 23-07-00](https://github.com/user-attachments/assets/83793e55-1e20-4b2b-ab5c-2c13162f1916)
+
+  ![Screenshot from 2024-09-21 23-07-22](https://github.com/user-attachments/assets/6304e8b6-b1fe-49c5-b443-d6fc018b60ed)
+  
+- **Filtering by Price**: Implement a price filter to show only items within a specific price range.
+  ![Screenshot from 2024-09-21 23-07-32](https://github.com/user-attachments/assets/f73582c6-043b-478a-9bda-a0013a03bb61)
+  
+- **Sorting Items**: Sort items in ascending order by price (with additional functionality for descending order and more).
+- ![Screenshot from 2024-09-21 23-07-45](https://github.com/user-attachments/assets/08f6003b-f046-4495-8c95-f8b4a4c43287)
+
+
+
+
+
 ## 💬 Contact
 
 Feel free to reach out if you have any questions or need further information!
-
-
-
-
